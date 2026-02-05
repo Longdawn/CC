@@ -1,0 +1,12 @@
+# 忽略数据文件夹
+data/
+datasets/
+
+# 忽略训练产生的实验结果和权重
+experiments/
+*.pt
+*.pth
+
+# 忽略系统自动生成的文件
+.DS_Store
+Thumbs.db

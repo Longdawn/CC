@@ -1,0 +1,35 @@
+# 基础配置
+base: configs/base.yaml
+exp_name: det_baseline_768
+
+# 数据
+data:
+  data_root: "data"                     # 关键：指向 CC-TextDet/data
+  train_json: "data/tw25/tw25_train.json"
+  val_json:   "data/tw25/tw25_val.json"
+
+
+# 训练 patch
+train_patch:
+  size: 768
+  text_center_prob: 0.7   # 70% 以文本像素为中心采样
+  max_tries: 20
+  min_text_pixels: 50     # patch 内至少有这么多文本像素才算“有文本”
+
+# 模型
+model:
+  name: unet
+  in_ch: 3
+  base_ch: 32
+
+# 优化
+optim:
+  lr: 0.0002
+  weight_decay: 0.01
+
+train:
+  epochs: 50
+  batch_size: 8
+  log_every: 20
+  vis_every: 200
+  save_every: 1

@@ -1,0 +1,10 @@
+_base_: base.yaml
+model:
+  type: dual_stream
+  decorrelation: true
+  fusion: gate
+dataset:
+  type: det
+training:
+  batch_size: 8
+  lr: 5e-4

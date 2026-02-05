@@ -1,0 +1,8 @@
+seed: 42
+device: cuda
+amp: true
+
+num_workers: 0   # Windows 初期建议 0，跑通再加
+pin_memory: true
+
+log_dir: experiments
